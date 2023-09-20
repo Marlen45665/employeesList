@@ -1,0 +1,30 @@
+.header{
+    width: 100%;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 75px;
+    background-color: #1F1F21;
+}
+.navigation{
+    font-family: "roboto";
+    font-weight: 500;
+    line-height: 150%;
+    font-style: normal;
+}
+.navigation-list{
+    list-style-type:  none;
+}
+.navigation-item{
+
+}
+.navigation-item:hover{
+    cursor: pointer;
+}
+#employeesList{
+    text-decoration: none;
+    color: #FFF;
+    font-size: 18px;
+}
