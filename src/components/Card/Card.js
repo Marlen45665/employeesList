@@ -1,6 +1,7 @@
 import "./Card.css"
 
-function Card(){
+function Card(props){
+    console.log("рендер Card")
     return(
         <div className="card">
             <div className="card-name">
@@ -8,21 +9,21 @@ function Card(){
                     <div className="initials">LL</div>
                 </div>
                 <div className="name-box">
-                    <div className="name">name</div>
-                    <div className="username">username</div>
+                    <div className="name">{`{${props.data.name}}`}</div>
+                    <div className="username">{`{${props.data.username}}`}</div>
                 </div>
             </div>
             <div className="card-email">
                 <div className="icon"></div>
-                <div className="email">email:email</div>
+                <div className="email">email:{`{${props.data.email}}`}</div>
             </div>
             <div className="card-email">
                 <div className="icon"></div>
-                <div className="email">email:email</div>
+                <div className="email">website:{`{${props.data.website}}`}</div>
             </div>
             <div className="card-email">
                 <div className="icon"></div>
-                <div className="email">email:email</div>
+                <div className="email">phone:{`{${props.data.phone}}`}</div>
             </div>
             
         </div>
