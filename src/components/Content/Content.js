@@ -1,36 +1,22 @@
 import { useState, useEffect, useMemo } from "react";
 import Card from "../Card/Card";
 import "./Content.css";
+import { fetchData } from "../servise/fetchData";
 
 function Content() {
     console.log("рендер Content");
 
     const [data, setData] = useState([]);
-    
-    const fetchData = () => {
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Ошибка при запросе');
-                }
-                return response.json();
-            })
-            .then((data) => {
-                setData(data);
-            })
-            .catch((error) => {
-                console.error('Ошибка при запросе:', error);
-            });
-    };
+    const URL = "https://jsonplaceholder.typicode.com/users"
 
     useEffect(() => {
-        fetchData(); 
+        // fetchData(); 
         // const intervalId = setInterval(() => {
-            fetchData(); 
+            fetchData(URL, setData); 
         // }, 50000);
 
         return () => {
-            // clearInterval(intervalId) // Очистить интервал при размонтировании компонента
+            // clearInterval(intervalId) 
         };
     }, []);
 

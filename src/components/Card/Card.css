@@ -1,4 +1,5 @@
 .card{
+    overflow: hidden;
     max-width: 400px;
     /* height: 199px; */
     background-color: #2C2D2D;
@@ -47,28 +48,28 @@
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
+    white-space: nowrap;
 }
 .username{
     font-size: 16px;
     font-weight: 400;
     line-height: 19px;
 }
-
-
-
-
-.card-email{
+.user-info{
     display: flex;
     gap: 5px;
     align-items: center;
-    color: #FFF
+    color: #FFF;
+    white-space: nowrap;
 }
 .icon{
     width: 25px;
     height: 25px;
-    background-color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.email{
+.user-info-title{
     font-family: Roboto;
     font-size: 15px;
     font-style: normal;
