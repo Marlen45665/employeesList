@@ -5,9 +5,8 @@ import Phone from "../../assets/icons/phone.svg"
 import "./Card.css"
 
 
-function Card(props){
+function Card({data}){
     console.log("рендер Card")
-    const {data} = props
     return(
         <div className="card">
             <div className="card-name">
