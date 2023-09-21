@@ -1,7 +1,8 @@
-import { useState, useEffect, useMemo } from "react";
 import Card from "../Card/Card";
-import "./Content.css";
+import { useState, useEffect, useMemo } from "react";
 import { fetchData } from "../servise/fetchData";
+import "./Content.css";
+
 
 function Content() {
     console.log("рендер Content");
@@ -10,14 +11,14 @@ function Content() {
     const URL = "https://jsonplaceholder.typicode.com/users"
 
     useEffect(() => {
-        // fetchData(); 
+        fetchData(URL, setData); 
         // const intervalId = setInterval(() => {
-            fetchData(URL, setData); 
-        // }, 50000);
+        //     fetchData(URL, setData); 
+        // }, 5000);
 
-        return () => {
-            // clearInterval(intervalId) 
-        };
+        // return () => {
+        //     clearInterval(intervalId) 
+        // };
     }, []);
 
     const memoizedCards = useMemo(() => {
