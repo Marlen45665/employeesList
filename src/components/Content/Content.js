@@ -5,13 +5,16 @@ import "./Content.css";
 
 
 function Content() {
-    console.log("рендер Content");
 
     const [data, setData] = useState([]);
     const URL = "https://jsonplaceholder.typicode.com/users"
 
     useEffect(() => {
         fetchData(URL, setData); 
+
+        //РАСКОМЕНТИРУЙТЕ КОД НИЖЕ ЧТОБ ПОЛУЧИТЬ ОБНОВЛЕНИЕ ДАННЫХ КАЖДЫЕ 5 СЕКУНД 
+        //-------------------------------------------
+
         // const intervalId = setInterval(() => {
         //     fetchData(URL, setData); 
         // }, 5000);
@@ -19,6 +22,7 @@ function Content() {
         // return () => {
         //     clearInterval(intervalId) 
         // };
+        
     }, []);
 
     const memoizedCards = useMemo(() => {

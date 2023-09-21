@@ -1,7 +1,6 @@
 import "./Navigation.css"
 
 function Navigation(){
-    console.log("рендер Navigation")
     return(
         <header className="header">
             <nav className="navigation">

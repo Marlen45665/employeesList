@@ -6,7 +6,6 @@ import "./Card.css"
 
 
 function Card({data}){
-    console.log("рендер Card")
     return(
         <div className="card">
             <div className="card-name">
